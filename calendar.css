@@ -64,16 +64,15 @@ body {
     display: grid;
     grid-template-columns: repeat(7, .95fr); 
     grid-auto-rows: .95fr; 
-    gap: 2px; 
+    gap: 0px; 
     border: 1px solid #444; 
-    background-color: #000; 
+      
   }
   
   
   .day-box {
     width: 100%;
     aspect-ratio: 1; 
-    background-color: #222; 
     border: 1px solid #444; 
     position: relative;
     overflow: hidden;
