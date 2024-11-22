@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-content: center;
     padding: 10px;
     background-color: black;
 }
@@ -49,6 +49,7 @@ body{
     border: none;
     cursor: pointer;
     border-radius: 50%;
+
 }
 
 .search button i {
