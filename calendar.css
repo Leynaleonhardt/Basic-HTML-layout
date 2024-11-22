@@ -1,38 +1,3 @@
-body {font-family: 'Arial', sans-serif; background-color: #000;}
-
-navigation bar 
-#header-nav{
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: black;
-}
-#header-nav a{
-    color:antiquewhite;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    position: sticky;
-}
-#header-nav a:hover {
-    background-color: #1e1e1f;
-    color: antiquewhite;}
-
-calendar 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #000; 
-    color: white; 
-    font-family: 'Jost';
-    display: flex;
-    justify-content:left ;
-    align-items: left;
-    height: 100vh;}
-
 .month-header h1 {letter-spacing: 10px; font-size: 45px; color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 100; margin-left: 50px;}
 .month-header h2 {font-size: 1.5rem; margin: 5px 0; color: #ccc;}
        

@@ -12,10 +12,12 @@ async function fetchMoonData() {
     // Extract
     let moonIllumination = data.moon_illumination_percentage;
       moonIllumination = moonIllumination * -1;
+    let moonPhase = data.moon_phase
+      moonPhase = moonPhase.replace(/_/g,' ');
     
     // Display
-    document.getElementById("illumination").innerText = `Illumination: ${moonIllumination}%`;
-
+    document.getElementById("dailyillumination").innerText = `Illumination: ${moonIllumination}%`;
+    document.getElementById("dailyPhase").innerText = `${moonPhase}`;
   } catch (error) {
     console.error("Error fetching the API:", error);
     document.querySelector(".moon-info").innerText = "Failed to load moon data.";
