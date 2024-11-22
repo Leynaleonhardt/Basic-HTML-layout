@@ -1,5 +1,5 @@
 // For IP Geolocation Astronomy API
-const apiKey = "4d2e7f567d4e4bdcab0fb0f9c1b82fce";
+const apiKey = "";
 
 async function fetchMoonData() {
   const apiUrl = `https://api.ipgeolocation.io/astronomy?apiKey=${apiKey}`;
