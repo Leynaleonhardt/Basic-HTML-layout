@@ -38,17 +38,15 @@ const moonPhaseImages = {
 // Reference date for a known new moon
 const referenceDate = new Date("2024-12-1");
 
-// Calculate the moon phase index for a given date
 function getMoonPhaseIndex(date) {
     const daysSinceReference = Math.floor((date - referenceDate) / (1000 * 60 * 60 * 24));
-    return ((daysSinceReference % 29) + 1); // Normalize to 1–29
-}
+    return ((daysSinceReference % 29) + 1);
 
-// Generate the calendar with moon phases
+// Generate the calendar
 function generateCalendar(year, month) {
     const calendarGrid = document.getElementById("calendar-grid");
     const monthName = document.getElementById("month-name");
-    calendarGrid.innerHTML = ""; // Clear previous calendar
+    calendarGrid.innerHTML = "";
     monthName.textContent = `${monthNames[month]} ${year}`;
 
     const firstDay = new Date(year, month, 1).getDay(); 
@@ -61,7 +59,7 @@ function generateCalendar(year, month) {
         calendarGrid.appendChild(emptyBox);
     }
 
-    // Generate day boxes with moon phases
+    // Generate day boxes with images
     for (let day = 1; day <= daysInMonth; day++) {
         const dayBox = document.createElement("div");
         dayBox.classList.add("day-box");
@@ -86,7 +84,6 @@ function generateCalendar(year, month) {
 }
 
 
-// Initialize the calendar and today's moon phase
 const today = new Date();
 generateCalendar(today.getFullYear(), today.getMonth());
 
