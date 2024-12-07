@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="stylebasic.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -26,15 +27,20 @@
 </body>
 <section>
     <h3>This weeks phases <a href="calendar.html"> Full Calender>> </a> </h3>
-    <td>
-        <tr>6 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/waxing_crescent.png?1" width="100px"></image></tr>
-        <tr>7 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/waxing_crescent.png?1" width="100px"></image></tr>
-        <tr>8 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/waxing_crescent.png?1" width="100px"></image></tr>
-        <tr>9 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/waxing_crescent.png?1" width="100px"></image></tr>
-        <tr>10 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/first_quarter.png?1" width="100px"></image></tr>
-        <tr>11 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/waxing_gibbous.png?1" width="100px"></image></tr>
-        <tr>12 <image src="https://www.moonphases.org/themes/xwm-moonphases/assets/images/moon-phases/waxing_gibbous.png?1" width="100px"></image></tr>
-    </td>
+        <div class="week">
+            <div class="days">
+                <div class="weekday">SUNDAY</div>
+                <div class="weekday">MONDAY</div>
+                <div class="weekday">TUESDAY</div>
+                <div class="weekday">WEDNESDAY</div>
+                <div class="weekday">THURSDAY</div>
+                <div class="weekday">FRIDAY</div>
+                <div class="weekday">SATURDAY</div>
+            </div>
+            <div class="week-grid" id="week-grid">
+            </div>
+        </div>
+<script src="index.js"></script>
 </section>
 <footer>
     <h2>Explore the Moon</h2>
