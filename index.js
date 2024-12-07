@@ -41,24 +41,31 @@ function getMoonPhaseIndex(date) {
 function populateWeeklyGrid() {
     const weekGrid = document.getElementById("week-grid");
     const today = new Date();
+    const weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     for (let i = 0; i < 7; i++) {
         const currentDate = new Date(today);
         currentDate.setDate(today.getDate() + i);
 
         const moonPhaseIndex = getMoonPhaseIndex(currentDate);
+        const weekdayName = weekdayNames[currentDate.getDay()];
 
-        const dayBox = document.createElement("div");
-        dayBox.classList.add("day-box");
+        const dayContainer = document.createElement("div");
+        dayContainer.classList.add("day-container");
+
+        const dayLabel = document.createElement("div");
+        dayLabel.classList.add("day-label");
+        dayLabel.textContent = weekdayName;
+        dayContainer.appendChild(dayLabel);
 
         const img = document.createElement("img");
         img.src = moonPhaseImages[moonPhaseIndex];
         img.alt = `Moon phase for ${currentDate.toDateString()}`;
         img.style.maxWidth = "80px";
         img.style.borderRadius = "50%";
+        dayContainer.appendChild(img);
 
-        dayBox.appendChild(img);
-        weekGrid.appendChild(dayBox);
+        weekGrid.appendChild(dayContainer);
     }
 }
 
