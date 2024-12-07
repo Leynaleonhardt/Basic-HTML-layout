@@ -41,6 +41,7 @@ const referenceDate = new Date("2024-12-1");
 function getMoonPhaseIndex(date) {
     const daysSinceReference = Math.floor((date - referenceDate) / (1000 * 60 * 60 * 24));
     return ((daysSinceReference % 29) + 1);
+}
 
 // Generate the calendar
 function generateCalendar(year, month) {
