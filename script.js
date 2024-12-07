@@ -23,7 +23,6 @@ async function fetchMoonData() {
   }
 }
 
-// Call the function to fetch and display data
 fetchMoonData();
 
 // For Today's Date
@@ -70,6 +69,8 @@ function displayMoonAge() {
 //Display 
 displayMoonAge();
 
+
+//Image array
 const moonPhaseImages = {
   1: "new_moon.jpg",  
   2: "WaxC_0.jpg",
@@ -104,13 +105,13 @@ const moonPhaseImages = {
 
 
 
-// Calculate the moon phase index for a given date
+// Calculate the index number(moon age) to correlate with the image array
 function getMoonPhaseIndex(date) {
     const daysSinceReference = Math.floor((date - referenceDate) / (1000 * 60 * 60 * 24));
-    return ((daysSinceReference % 29) + 1); // Normalize to 1–29
+    return ((daysSinceReference % 29) + 1);
 }
 
-// Display today's moon phase image
+//Drawing image with index number
 function displayTodayImage() {
   const todayMoonElement = document.getElementById("todaymoon");
   const today = new Date();
@@ -121,8 +122,10 @@ function displayTodayImage() {
   img.alt = "Today's Moon Phase";
   img.loading = "lazy";
 
-  todayMoonElement.innerHTML = ""; // Clear previous content
+  todayMoonElement.innerHTML = "";
+  
   todayMoonElement.appendChild(img);
 }
 
+//Display
 displayTodayImage();
